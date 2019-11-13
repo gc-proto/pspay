@@ -98,7 +98,7 @@
 		padding-left: 55px !important;
 	}
 	.promo-social {
-		margin-top: 3em;
+		margin-top: 2em;
 	}
 
 	.promo-social h3 {
@@ -122,6 +122,54 @@
 	float: left !important;
 }
 
+.contributors ul {
+	margin-inline-start: 0px !important;
+}
+
+}
+
+
+.most-requested {
+	margin-top: 0px !important;
+}
+
+.contributors {
+	font-size: 16px !important;
+	font-weight: 600;
+}
+
+.from {
+	font-size: 16px !important;
+	margin-top: 7px;
+}
+
+.contributors ul {
+	margin-block-start: 0em;
+	margin-block-end: 0em;
+	margin-inline-start: -28px;
+	margin-inline-end: 0px;
+	padding-inline-start: 0px;
+
+}
+
+
+/* as a list */
+@media screen and (min-width: 992px) {
+.contributors li {
+    display: inline-block;
+    float: left;
+    margin-right: .7em;
+}
+}
+
+@media screen and (min-width: 992px) {
+.contributors li:first-child:before {
+    content: none;
+}
+.contributors li:before {
+    content: "\2022";
+    margin-right: .7em;
+}
 }
 </style>
 
@@ -130,15 +178,16 @@
 	<div class="row">
 	  <section class="col-md-12">
 	    <div class="container row"><!-- container must wrap around top content in order to fit the page properly, only close it when you hit the Most Requested 'section' -->
-	      <div class="row col-md-7">
+	      <div class="row col-md-7 col-sm-12">
 	        <h1 id="wb-cont" property="name">Working for the Government of Canada
 	        </h1>
 	        <p>Public service, military and RCMP members rates of pay, benefits, and pension plan. Workplace wellness and the values and principles that guide our work.
 	        </p>
 	      </div>
-	      <div class="row col-md-5">image would go here
-	      </div>
+
 	    </div>
+			<div class="row col-md-5 pull-right hidden-sm hidden-xs"><img style="position: absolute; bottom:0; height: 215px;" src="https://www.canada.ca/content/dam/tbs-sct/images/20190606-carousel-555x134.jpg"/>
+		 </div>
 
 		</main>
 	    <!-- end container -->
@@ -253,12 +302,12 @@
 	          <h2>On social media
 	          </h2>
 	          <ul>
-	            <li class="mrgn-bttm-lg"><a href="#" rel="external"><img src="https://test.canada.ca/canada-child-benefit-2/validation/GCWeb/images/facebook.png" /><b><span class="media-spc">YourGovernmentatWork</b></span>
+	            <li class="mrgn-bttm-lg"><a href="https://www.facebook.com/YourGovernmentatWork/" rel="external"><img src="https://test.canada.ca/canada-child-benefit-2/validation/GCWeb/images/facebook.png" /><b><span class="media-spc">YourGovernmentatWork</b></span>
 
 	            <br><span class="media-spc-2">on Facebook</span></li></a>
 
 
-							<li><a href="#" rel="external"><img src="https://test.canada.ca/canada-child-benefit-2/validation/GCWeb/images/twitter.png" /><b><span class="media-spc">YourGovernmentatWork</b></span>
+							<li><a href="https://twitter.com/tbs_canada?lang=en" rel="external"><img src="https://test.canada.ca/canada-child-benefit-2/validation/GCWeb/images/twitter.png" /><b><span class="media-spc">YourGovernmentatWork</b></span>
 
 							<br><span class="media-spc-2">on Twitter</span></li></a>
 
@@ -271,11 +320,22 @@
 			</div>
 
 
-	      <div class="clearfix">&nbsp;
-	      </div>
-				<div>
-	      <small><b>From: <a href="#">Treasury Board of Canada Secretariat</a>; <a href="#">Public Services and Procurement Canada</a></b> </small>
-	    </div>
+
+<div class="clearfix">&nbsp;
+</div>
+
+<h2 class="wb-inv">Contributors</h2>
+		<div class="row col-md-1">
+			 <h3 class="from">From:</h3>
+		</div>
+
+		<div class="col-md-11 contributors">
+       <ul>
+           <li><a href="https://www.canada.ca/en/treasury-board-secretariat.html">Treasury Board of Canada Secretariat</a></li>
+           <li><a href="https://www.tpsgc-pwgsc.gc.ca/comm/index-eng.html">Public Services and Procurement Canada</a></li>
+       </ul>
+	 </div>
+
 	  </section>
 	</div>
 <div id="def-preFooter">
