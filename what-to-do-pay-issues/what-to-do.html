@@ -11,6 +11,8 @@
 		<!-- Load closure template scripts -->
 		<script type="text/javascript" src="https://www.canada.ca/etc/designs/canada/cdts/gcweb/v4_0_31/cdts/compiled/soyutils.js"></script>
 		<script type="text/javascript" src="https://www.canada.ca/etc/designs/canada/cdts/gcweb/v4_0_31/cdts/compiled/wet-en.js"></script>
+		<link rel="stylesheet" href="https://canada-ca.github.io/design-system-systeme-conception/src/custom-3.css">
+
 
 		<!-- Write closure template -->
 		<script type="text/javascript">
@@ -41,31 +43,43 @@
 </script>
 
 
+
+
 <main class="container" property="mainContentOfPage" role="main">
   <h1 id="wb-cont" property="name">What to do if you're having pay issues
   </h1>
   <p>Enter details about your pay issue for guidance, or directly access specific help.
   </p>
-  <p>What kind of issue are you having?
-  </p>
-  <div class="radio"><label for="no-pay">
-    <input id="no-pay" name="pay-issue" type="radio" value="Received no pay" />&nbsp;&nbsp; Received no pay </label>
-  </div>
-  <div class="radio"><label for="not-full-pay">
-    <input id="not-full-pay" name="pay-issue" type="radio" value="Didn't receive full pay" />&nbsp;&nbsp; Didn't receive full pay </label>
-  </div>
-  <div class="radio"><label for="overpayment">
-    <input id="overpayment" name="pay-issue" type="radio" value="Received too much pay (overpayment)" />&nbsp;&nbsp; Received too much pay (overpayment) </label>
-  </div>
-  <div class="radio"><label for="deductions">
-    <input id="deductions" name="pay-issue" type="radio" value="Deductions were incorrect" />&nbsp;&nbsp; Deductions were incorrect </label>
-  </div>
-  <div class="radio"><label for="other">
-    <input id="other" name="pay-issue" type="radio" value="Other pay issue not on this list" />&nbsp;&nbsp; Other pay issue not on this list </label>
-  </div>
-  <div class="radio"><label for="update">
-    <input id="update" name="pay-issue" type="radio" value="Need an update on a reported issue" />&nbsp;&nbsp; Need an update on a reported issue </label>
-  </div>
+	<legend class="h5">What kind of issue are you having?</legend>
+
+ <ul class="list-unstyled can-ca-form">
+  <li class="radio">
+   <input id="no-pay" name="pay-issue" type="radio" value="Received no pay" />
+   <label for="no-pay">Received no pay</label>
+  </li>
+  <li class="radio">
+   <input id="not-full-pay" name="pay-issue" type="radio" value="Didn't receive full pay" />
+   <label for="not-full-pay">Didn't receive full pay</label>
+  </li>
+  <li class="radio">
+   <input id="overpayment" name="pay-issue" type="radio" value="Received too much pay (overpayment)" />
+   <label for="overpayment">Received too much pay (overpayment)</label>
+  </li>
+  <li class="radio">
+   <input id="deductions" name="pay-issue" type="radio" value="Deductions were incorrect" />
+   <label for="deductions" />Deductions were incorrect</label>
+  </li>
+  <li class="radio">
+   <input id="other" name="pay-issue" type="radio" value="Other pay issue not on this list" />
+   <label for="other">Other pay issue not on this list </label>
+  </li>
+  <li class="radio">
+   <input id="update" name="pay-issue" type="radio" value="Need an update on a reported issue" />
+   <label for="update">Need an update on a reported issue </label>
+  </li>
+ </ul>
+<input type="submit" value="Continue" class="btn btn-primary mrgn-bttm-md">
+
 <div class="clearfix mrgn-tp-lg"></div>
   <div id="no-pay-help" style="display:none">
     <p>Did you recently start in the public service?
@@ -98,7 +112,11 @@
   <div id="select-dept" style="display:none"><!-- select dept -->
     <p>Your department or agency (or where you were when you had the issue):
     </p>
+
+
     <script>
+
+
       //Hide dropdown datalist until input >= 'chars'
       //function hideUnlessInput(dropdownID, datalistID, chars){
       //  if(document.getElementById(dropdownID).value.length >= chars ){
@@ -148,7 +166,7 @@
     <p>Served by its own compensation advisors.
     </p>
   </div>
-  <div id="def-preFooter">&nbsp;
+  <div id="def-preFooter">
   </div>
   <!-- Write closure template --><script type="text/javascript">
   var defPreFooter = document.getElementById("def-preFooter");
@@ -235,6 +253,7 @@
       });
     });
 </script>
+
 
 	</body>
 </html>
