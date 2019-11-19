@@ -1,0 +1,239 @@
+<!DOCTYPE html>
+<!--[if lt IE 9]><html class="no-js lt-ie9" lang="en" dir="ltr"><![endif]-->
+<!--[if gt IE 8]><!--><html class="no-js" lang="en" dir="ltr"><!--<![endif]-->
+	<head>
+		<meta charset="utf-8">
+		<!-- Web Experience Toolkit (WET) / Boîte à outils de l'expérience Web (BOEW) wet-boew.github.io/wet-boew/License-en.html / wet-boew.github.io/wet-boew/Licence-fr.html -->
+		<title>Theme page design - Canada.ca</title>
+		<meta content="width=device-width,initial-scale=1" name="viewport">
+		<!-- Meta data -->
+		<!-- Meta data-->
+		<!-- Load closure template scripts -->
+		<script type="text/javascript" src="https://www.canada.ca/etc/designs/canada/cdts/gcweb/v4_0_31/cdts/compiled/soyutils.js"></script>
+		<script type="text/javascript" src="https://www.canada.ca/etc/designs/canada/cdts/gcweb/v4_0_31/cdts/compiled/wet-en.js"></script>
+
+		<!-- Write closure template -->
+		<script type="text/javascript">
+			document.write(wet.builder.refTop({
+			}));
+		</script>
+	</head>
+	<body vocab="http://schema.org/" typeof="WebPage">
+		<div id="def-top">
+		</div>
+		<!-- Write closure template -->
+		<script type="text/javascript">
+			var defTop = document.getElementById("def-top");
+			defTop.outerHTML = wet.builder.top({
+				lngLinks: [{
+					lang: "fr",
+					href: "#",
+					text: "Français"
+				}],
+				breadcrumbs: [{
+					title: "Home",
+					href: "https://www.canada.ca/en.html"
+				}],
+				search: true,
+				siteMenu: true,
+				showPreContent: true
+			});
+</script>
+
+
+<main class="container" property="mainContentOfPage" role="main">
+  <h1 id="wb-cont" property="name">What to do if you're having pay issues
+  </h1>
+  <p>Enter details about your pay issue for guidance, or directly access specific help.
+  </p>
+  <p>What kind of issue are you having?
+  </p>
+  <div class="radio"><label for="no-pay">
+    <input id="no-pay" name="pay-issue" type="radio" value="Received no pay" />&nbsp;&nbsp; Received no pay </label>
+  </div>
+  <div class="radio"><label for="not-full-pay">
+    <input id="not-full-pay" name="pay-issue" type="radio" value="Didn't receive full pay" />&nbsp;&nbsp; Didn't receive full pay </label>
+  </div>
+  <div class="radio"><label for="overpayment">
+    <input id="overpayment" name="pay-issue" type="radio" value="Received too much pay (overpayment)" />&nbsp;&nbsp; Received too much pay (overpayment) </label>
+  </div>
+  <div class="radio"><label for="deductions">
+    <input id="deductions" name="pay-issue" type="radio" value="Deductions were incorrect" />&nbsp;&nbsp; Deductions were incorrect </label>
+  </div>
+  <div class="radio"><label for="other">
+    <input id="other" name="pay-issue" type="radio" value="Other pay issue not on this list" />&nbsp;&nbsp; Other pay issue not on this list </label>
+  </div>
+  <div class="radio"><label for="update">
+    <input id="update" name="pay-issue" type="radio" value="Need an update on a reported issue" />&nbsp;&nbsp; Need an update on a reported issue </label>
+  </div>
+  <div id="no-pay-help" style="display:none">
+    <p>Did you recently start in the public service?
+    </p>
+    <ul>
+      <li>Yes</li>
+      <li>No</li>
+    </ul>
+  </div>
+  <div id="not-full-pay-help" style="display:none">
+    <p>If you didn't receive full pay...
+    </p>
+  </div>
+  <div id="overpayment-help" style="display:none">
+    <p><a href="https://tbs-proto1.openplus.ca/en/node/385/">Overpayment help</a>
+    </p>
+  </div>
+  <div id="deductions-help" style="display:none">
+    <p>If there are issues with deductions...
+    </p>
+  </div>
+  <div id="other-help" style="display:none">
+    <p>For other issues, contact the Pay contact centre.
+    </p>
+  </div>
+  <div id="update-help" style="display:none">
+    <p>If you submitted to the Pay contact centre, you can call to get an update.
+    </p>
+  </div>
+  <div id="select-dept" style="display:none"><!-- select dept -->
+    <p>Your department or agency (or where you were when you had the issue):
+    </p>
+    <script>
+      //Hide dropdown datalist until input >= 'chars'
+      //function hideUnlessInput(dropdownID, datalistID, chars){
+      //  if(document.getElementById(dropdownID).value.length >= chars ){
+      //    document.getElementById(datalistID).style.display = 'block';
+      //  }document.getElementById(dropdownID).value != null &&
+      //else if(document.getElementById(dropdownID) != null){
+      //  document.getElementById(datalistID).style.display = 'none';
+      //}
+      //}
+      function displayParagraph(){
+        var currentlySelectedDept = document.getElementById("dept").value;
+        //Hide dropdown unless there is user input
+        alert(document.activeElement)
+        if(!document.getElementById("dept").value){
+          alert(document.getElementById("dept").text);
+        }
+        //Edit alt-text
+        var currentlySelectedItem = document.querySelector("option[value='"+currentlySelectedDept+"']");
+        var currentSysCheck = currentlySelectedItem.getAttribute("data-paysys");
+        if(currentSysCheck == 'true' || currentSysCheck == '"true"'){
+          document.getElementById("NOPAYSYSDIV").style.display = "none";
+          document.getElementById("HASPAYSYSDIV").style.display = "block";
+        }
+        else{
+          document.getElementById("HASPAYSYSDIV").style.display = "none";
+          document.getElementById("NOPAYSYSDIV").style.display = "block";
+        }
+      }
+      displayParagraph();
+    </script>
+    <p><input id="dept" list="suggestions" name="dept" onchange="displayParagraph()" style="width:35em" type="text" /> <datalist id="suggestions"> <!--[if lte IE 9]><select><![endif]--> <!--[if lte IE 9]></select><![endif]-->
+      </datalist>
+      <script>
+        //Open Departments Data JSON (XSS Avoidance: Must be stored locally)
+        fetch('https://tbs-proto1.openplus.ca/sites/default/files/2019-10/departmentsdata_0.txt')
+          .then(response => response.text())
+          .then(text => fillDataList(id="suggestions",dataset=text,delimiters=["department","abbreviation","paySys"],value="department", label="abbreviation"));
+      </script>
+    </p>
+  </div>
+  <!-- Select dept -->
+  <div id="HASPAYSYSDIV" style="display:none">
+    <p>Served by the Pay Centre.
+    </p>
+  </div>
+  <div id="NOPAYSYSDIV" style="display:none">
+    <p>Served by its own compensation advisors.
+    </p>
+  </div>
+  <div id="def-preFooter">&nbsp;
+  </div>
+  <!-- Write closure template --><script type="text/javascript">
+  var defPreFooter = document.getElementById("def-preFooter");
+  defPreFooter.outerHTML = wet.builder.preFooter({
+    dateModified: "April 1, 2019",
+    showPostContent: true,
+    showFeedback: true,
+    showShare: true
+  });
+  </script>
+</main>
+<div id="def-footer">&nbsp;
+</div>
+<!-- Write closure template --><script type="text/javascript">
+  var defFooter = document.getElementById("def-footer");
+  defFooter.outerHTML = wet.builder.footer({
+    showFooter: true,
+    showFeatures: true
+  });
+</script><!-- Write closure template --><script type="text/javascript">
+  document.write(wet.builder.refFooter({
+  }));
+</script>
+<script>
+  var issueType = "";
+  $(document).ready(
+    function(){
+      $("input[name=pay-issue]").on( "change", function() {
+        issueType = this.id; //issueType becomes the ID of their choice
+        if (issueType == 'update')
+        {
+          $("#deductions-help").hide("slow");
+          $("#not-full-pay-help").hide("slow");
+          $("#no-pay-help").hide("slow");
+          $("#overpayment-help").hide("slow");
+          $("#other-help").hide("slow");
+          $("#update-help").show("slow");
+        }
+        else if (issueType=='overpayment')
+        {
+          $("#deductions-help").hide("slow");
+          $("#not-full-pay-help").hide("slow");
+          $("#no-pay-help").hide("slow");
+          $("#update-help").hide("slow");
+          $("#other-help").hide("slow");
+          $("#overpayment-help").show("slow");
+        }
+        else if (issueType=='no-pay')
+        {
+          $("#deductions-help").hide("slow");
+          $("#not-full-pay-help").hide("slow");
+          $("#update-help").hide("slow");
+          $("#overpayment-help").hide("slow");
+          $("#other-help").hide("slow");
+          $("#no-pay-help").show("slow");
+        }
+        else if (issueType=='not-full-pay')
+        {
+          $("#deductions-help").hide("slow");
+          $("#update-help").hide("slow");
+          $("#overpayment-help").hide("slow");
+          $("#no-pay-help").hide("slow");
+          $("#other-help").hide("slow");
+          $("#not-full-pay-help").show("slow");
+        }
+        else if (issueType=='deductions')
+        {
+          $("#update-help").hide("slow");
+          $("#overpayment-help").hide("slow");
+          $("#no-pay-help").hide("slow");
+          $("#not-full-pay-help").hide("slow");
+          $("#other-help").hide("slow");
+          $("#deductions-help").show("slow");
+        }
+        else if (issueType=='other')
+        {
+          $("#update-help").hide("slow");
+          $("#overpayment-help").hide("slow");
+          $("#no-pay-help").hide("slow");
+          $("#not-full-pay-help").hide("slow");
+          $("#deductions-help").hide("slow");
+          $("#other-help").show("slow");
+        }
+      });
+    });
+</script>
+
+	</body>
+</html>
