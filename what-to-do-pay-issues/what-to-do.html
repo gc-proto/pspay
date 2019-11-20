@@ -92,18 +92,29 @@
 
 <div class="clearfix mrgn-tp-lg"></div>
   <div id="no-pay-help" style="display:none">
+    <!-- Second question for no pay-->
     <p>Did you start or return to work within the last 6 weeks?
     </p>
     <ul class="list-unstyled can-ca-form">
        <li class="radio">
-   	<input id="yes-recent" name="pay-issue" type="radio" value="Yes" />
+   	<input id="yes-recent" name="new-hire" type="radio" value="Yes" />
    	<label for="yes-recent">Yes</label>
   	</li>
   	<li class="radio">
-   	<input id="not-recent" name="pay-issue" type="radio" value="No" />
+   	<input id="not-recent" name="new-hire" type="radio" value="No" />
    	<label for="not-recent">No </label>
   	</li>
     </ul>
+  </div>
+  <div id="2recent-hire"> <!--triggered by yes-recent for new-hire-->
+    <p>If all the paperwork was submitted on time, your first pay should be deposited within 4 weeks of your start date.  </p>
+    <ul>
+      <li>If it has been more than 4 weeks since your start date without pay, you can ask your manager for an Emergency Salary Advance.</li>
+      <li>Check the Pay Calendar to find out the <a href="https://tbs-proto1.openplus.ca/node/196#pay-periods">timing of pay periods with paydays and your first pay</a>. </li>
+    </ul>
+  </div>
+  <div id="2not-recent"> <!--triggered by no-recent for new-hire-->
+    <p>Ask the DEPARTMENT question here  </p>
   </div>
   <div id="not-full-pay-help" style="display:none">
     <p>If you didn't receive full pay...
@@ -270,6 +281,25 @@
     });
 </script>
 
+<script>
+  var hireDate= "";
+  $(document).ready(
+    function(){
+      $("input[name=new-hire]").on( "change", function() {
+        hireDate = this.id; //issueType becomes the ID of their choice
+        if (hireDate == 'yes-recent')
+        {
+          $("#2not-recent").hide("slow");
+          $("#2recent-hire").show("slow");
+        }
+        else if (hireDate=='no-recent')
+        {
+          $("#2recent-hire").hide("slow");
+          $("#2not-recent").show("slow");
+        }
+      });
+    });
+</script>
 
 	</body>
 </html>
