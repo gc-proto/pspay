@@ -115,6 +115,63 @@
   </div>
   <div id="2not-recent" style="display:none"> <!--triggered by no-recent for new-hire-->
     <p>Ask the DEPARTMENT question here  </p>
+    <section> <!-- radio button question about whether or not served by pay centre-->
+      <div class="well" style="background-color:white !important;">
+        <h2 id="Steps">Pay timeline and steps
+        </h2>
+        <p>The process differs for departments served by the Pay Centre and those served by compensation advisors.
+        </p>
+        <div class="wb-frmvld" data-wb-urlmapping="{
+                                                   &quot;p=paycentre&quot;: { &quot;action&quot;: &quot;addClass&quot;, &quot;class&quot;: &quot;hidden&quot; },
+                                                   &quot;p=notpaycentre&quot;: { &quot;action&quot;: &quot;addClass&quot;, &quot;class&quot;: &quot;hidden&quot; }
+                                                   }"><!-- <form method="get"> --><!--Smart question!-->
+          <div class="wb-fieldflow" data-wb-fieldflow="{
+                                                       &quot;noForm&quot;:false,
+                                                       &quot;renderas&quot;:&quot;radio&quot;,
+                                                       &quot;base&quot;: { &quot;live&quot;: false },
+                                                       &quot;noreqlabel&quot;: true,
+                                                       &quot;default&quot;: [{ &quot;action&quot;: &quot;addClass&quot;, &quot;source&quot;:&quot;#paycentre,#notpaycentre&quot;, &quot;class&quot;: &quot;hidden&quot; },
+                                                       { &quot;action&quot;: &quot;addClass&quot;, &quot;source&quot;: &quot;#wb-auto-12&quot;, &quot;class&quot;: &quot;checked&quot;}]
+                                                       }" id="question1">
+            <p>Is your department served by the Pay Centre?
+            </p>
+            <ul>
+              <li data-wb-fieldflow="{ &quot;action&quot;: &quot;removeClass&quot;, &quot;source&quot;:&quot;#paycentre&quot;, &quot;class&quot;: &quot;hidden&quot;}">Yes, served by the Pay Centre</li>
+              <!--result-->
+              <li data-wb-fieldflow="{ &quot;action&quot;: &quot;removeClass&quot;, &quot;source&quot;:&quot;#notpaycentre&quot;, &quot;class&quot;: &quot;hidden&quot; }">No, we have compensation advisors</li>
+              <li data-wb-fieldflow="{ &quot;action&quot;: &quot;removeClass&quot;, &quot;source&quot;:&quot;#notsure&quot;, &quot;class&quot;: &quot;hidden&quot; }">Not sure - help me find out</li>
+            </ul>
+          </div>
+          <!-- </form> --></div>
+        <div class="hidden" data-wb-urlmapping="{ &quot;p=paycentre&quot;: { &quot;action&quot;: &quot;removeClass&quot;, &quot;class&quot;: &quot;hidden&quot; } }" id="paycentre">
+          <p>Your department is served by the Pay Centre
+          </p>
+           <section>          
+  <h3>Pay Timeline
+          </h3>
+          <p>Notify your manager about your planned leave as soon as possible or at least 6&nbsp;weeks before your expected leave date. Your manager must approve your request for leave. Once this is done, work with your manager and human resources personnel, including your departmentís trusted source, to ensure the Pay Centre receives the necessary documentation and information before your leave begins.
+          </p>
+            <h3 id="important-forms">Steps to follow
+            </h3>
+            <p>Work with your manager to ensure you complete the following form. Your trusted source must submit it to the Pay Centre <strong>before</strong> you begin your maternity or parental leave:
+            </p>
+            <ul>
+              <li><a href="http://publiservice-app.pwgsc.gc.ca/forms/index.cfm?fuseaction=search.details&amp;lang=e&amp;display=7460">Leave application and absence report (Form GC-178 PDF </a> accessible only on the Government of Canada network</li>
+            </ul>
+          </section>
+        </div>
+        <div class="hidden" data-wb-urlmapping="{ &quot;p=notpaycentre&quot;: { &quot;action&quot;: &quot;removeClass&quot;, &quot;class&quot;: &quot;hidden&quot; } }" id="notpaycentre">
+          <p>Your department is served by compensation advisors within your department, not the Public Service Pay Centre. You or your manager should contact your departmental compensation and HR advisor unit about your situation.
+          </p>
+        </div>
+        <div class="hidden" data-wb-urlmapping="{ &quot;p=notsure&quot;: { &quot;action&quot;: &quot;removeClass&quot;, &quot;class&quot;: &quot;hidden&quot; } }" id="notsure">
+          <p>Show autocomplete here so people can enter their department and find out whether they are or are not served by the pay centre. 
+          </p>
+        </div>
+      </div>
+      <div class="clearfix">&nbsp;
+      </div>
+    </section> <!-- END OF SECTION WITH DEPT QUESTION-->
   </div>
   <div id="not-full-pay-help" style="display:none">
     <p>If you didn't receive full pay...
