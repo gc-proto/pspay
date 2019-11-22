@@ -100,6 +100,7 @@
     //Open Departments Data JSON (XSS Avoidance: Must be stored locally)
     fetch('https://gc-proto.github.io/pspay/what-to-do-pay-issues/departmentsdata_0.txt')
       .then(response => response.text())
+			console.log(response.text());
       .then(text => fillDataList(id="suggestions",dataset=text,delimiters=["department","abbreviation","paySys"],value="department", label="abbreviation"));
   </script>
   </p>
