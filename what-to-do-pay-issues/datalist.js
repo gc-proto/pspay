@@ -84,9 +84,9 @@ var componentName = "wb-datalist",
 
 		if ( value && value.length !== 0 ) {
 			comparator = value.toLowerCase();
-			$options = $options.filter( function() {
+			$options = $options.startsWith( function() {
 				var $this = $( this ),
-					value = $this.find( "span.al-val" ).html();
+				value = $this.find( "span.al-val" ).html();
 				if ( value.length === 0 ) {
 					value = $this.find( "span.al-lbl" ).html();
 				}
