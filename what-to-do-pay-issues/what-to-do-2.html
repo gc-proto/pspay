@@ -100,8 +100,8 @@
     //Open Departments Data JSON (XSS Avoidance: Must be stored locally)
     fetch('./departmentsdata_0.txt')
       .then(response => response.text())
-			console.log(response.text());
       .then(text => fillDataList(id="suggestions",dataset=text,delimiters=["department","abbreviation","paySys"],value="department", label="abbreviation"));
+			console.log(response.text());
   </script>
   </p>
         <div id="HASPAYSYSDIV" style="display:none">
