@@ -125,9 +125,9 @@
                 <li>If no one in your management chain is available to talk to you right away, you should <a href="https://tbs-proto1.openplus.ca/en/node/114">contact the Pay Help Centre</a></li>
               </ul>
           </section>
-          <h2 id="Steps">Pay timeline and steps
+          <h2 id="Steps">Next step
             </h2>
-            <p>Enter and select your department name or initials to view the timeline and steps for your department:
+            <p>Enter and select your department name or initials to view the process for your department:
             </p>
             <script>
               //Hide dropdown datalist until input >= 'chars'
@@ -206,70 +206,6 @@
     <p>Your department or agency (or where you were when you had the issue):
     </p>
 
-
-    <script>
-
-
-      //Hide dropdown datalist until input >= 'chars'
-      //function hideUnlessInput(dropdownID, datalistID, chars){
-      //  if(document.getElementById(dropdownID).value.length >= chars ){
-      //    document.getElementById(datalistID).style.display = 'block';
-      //  }document.getElementById(dropdownID).value != null &&
-      //else if(document.getElementById(dropdownID) != null){
-      //  document.getElementById(datalistID).style.display = 'none';
-      //}
-      //}
-      function displayParagraph(){
-        var currentlySelectedDept = document.getElementById("dept").value;
-        //Hide dropdown unless there is user input
-        alert(document.activeElement)
-        if(!document.getElementById("dept").value){
-          alert(document.getElementById("dept").text);
-        }
-        //Edit alt-text
-        var currentlySelectedItem = document.querySelector("option[value='"+currentlySelectedDept+"']");
-        var currentSysCheck = currentlySelectedItem.getAttribute("data-paysys");
-        if(currentSysCheck == 'true' || currentSysCheck == '"true"'){
-          document.getElementById("NOPAYSYSDIV").style.display = "none";
-          document.getElementById("HASPAYSYSDIV").style.display = "block";
-        }
-        else{
-          document.getElementById("HASPAYSYSDIV").style.display = "none";
-          document.getElementById("NOPAYSYSDIV").style.display = "block";
-        }
-      }
-      displayParagraph();
-    </script>
-    <p><input id="dept" list="suggestions" name="dept" onchange="displayParagraph()" style="width:35em" type="text" /> <datalist id="suggestions"> <!--[if lte IE 9]><select><![endif]--> <!--[if lte IE 9]></select><![endif]-->
-      </datalist>
-      <script>
-        //Open Departments Data JSON (XSS Avoidance: Must be stored locally)
-        fetch('https://tbs-proto1.openplus.ca/sites/default/files/2019-10/departmentsdata_0.txt')
-          .then(response => response.text())
-          .then(text => fillDataList(id="suggestions",dataset=text,delimiters=["department","abbreviation","paySys"],value="department", label="abbreviation"));
-      </script>
-    </p>
-  </div>
-  <!-- Select dept -->
-  <div id="HASPAYSYSDIV" style="display:none">
-    <p>Served by the Pay Centre.
-    </p>
-  </div>
-  <div id="NOPAYSYSDIV" style="display:none">
-    <p>Served by its own compensation advisors.
-    </p>
-  </div>
-  <div id="def-preFooter">
-  </div>
-  <!-- Write closure template --><script type="text/javascript">
-  var defPreFooter = document.getElementById("def-preFooter");
-  defPreFooter.outerHTML = wet.builder.preFooter({
-    dateModified: "April 1, 2019",
-    showPostContent: true,
-    showFeedback: true,
-    showShare: true
-  });
-  </script>
 </main>
 <div id="def-footer">&nbsp;
 </div>
