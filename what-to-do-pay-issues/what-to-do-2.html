@@ -99,7 +99,7 @@
 		<datalist id="suggestions" style="display:none"> <!--[if lte IE 9]><select><![endif]--> <!--[if lte IE 9]></select><![endif]--></datalist>
 		<script>
 	    //Open Departments Data JSON (XSS Avoidance: Must be stored locally)
-	    fetch('https://gc-proto.github.io/pspay/what-to-do-pay-issues/departmentsdata_0.txt')
+	    fetch('https://tbs-proto1.openplus.ca/sites/default/files/2019-10/departmentsdata_0.txt')
 	      .then(response => response.text())
 	      .then(text => fillDataList(id="suggestions",dataset=text,delimiters=["department","abbreviation","paySys"],value="department", label="abbreviation"));
 	  </script>
