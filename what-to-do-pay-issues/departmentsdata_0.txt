@@ -1,0 +1,864 @@
+[
+    {
+        "department": "Administrative Tribunals Support Service of Canada",
+        "abbreviation": "ATSSC"
+    },
+    {
+        "department": "Agriculture and Agri-Food Canada",
+        "abbreviation": "AAFC",
+        "paySys": "true"
+    },
+    {
+        "department": "Atlantic Canada Opportunities Agency",
+        "abbreviation": "ACOA"
+    },
+    {
+        "department": "Atlantic Pilotage Authority Canada",
+        "abbreviation": "APA"
+    },
+    {
+        "department": "Atomic Energy of Canada Limited",
+        "abbreviation": "AECL"
+    },
+    {
+        "department": "Auditor General of Canada (Office of the)",
+        "abbreviation": "OAG"
+    },
+    {
+        "department": "Bank of Canada",
+        "abbreviation": null
+    },
+    {
+        "department": "Bank of Canada Museum",
+        "abbreviation": null
+    },
+    {
+        "department": "Blue Water Bridge Canada",
+        "abbreviation": "BWB"
+    },
+    {
+        "department": "Business Development Bank of Canada",
+        "abbreviation": "BDC"
+    },
+    {
+        "department": "Canada Agricultural Review Tribunal",
+        "abbreviation": "CART"
+    },
+    {
+        "department": "Canada Agriculture and Food Museum",
+        "abbreviation": null
+    },
+    {
+        "department": "Canada Aviation and Space Museum",
+        "abbreviation": null
+    },
+    {
+        "department": "Canada Border Services Agency",
+        "abbreviation": "CBSA"
+    },
+    {
+        "department": "Canada Council for the Arts",
+        "abbreviation": null
+    },
+    {
+        "department": "Canada Deposit Insurance Corporation",
+        "abbreviation": "CDIC"
+    },
+    {
+        "department": "Canada Development Investment Corporation",
+        "abbreviation": "CDEV"
+    },
+    {
+        "department": "Canada Economic Development for Quebec Regions",
+        "abbreviation": "CED"
+    },
+    {
+        "department": "Canada Employment Insurance Commission",
+        "abbreviation": "CEIC"
+    },
+    {
+        "department": "Canada Energy Regulator",
+        "abbreviation": "CER"
+    },
+    {
+        "department": "Canada Firearms Centre",
+        "abbreviation": "CAFC"
+    },
+    {
+        "department": "Canada Industrial Relations Board",
+        "abbreviation": "CIRB"
+    },
+    {
+        "department": "Canada Infrastructure Bank",
+        "abbreviation": "CIB"
+    },
+    {
+        "department": "Canada Lands Company Limited",
+        "abbreviation": "CLC"
+    },
+    {
+        "department": "Canada Mortgage and Housing Corporation",
+        "abbreviation": "CMHC"
+    },
+    {
+        "department": "Canada Pension Plan Investment Board",
+        "abbreviation": "CPPIB"
+    },
+    {
+        "department": "Canada Post",
+        "abbreviation": "CPC"
+    },
+    {
+        "department": "Canada Research Chairs",
+        "abbreviation": null
+    },
+    {
+        "department": "Canada Revenue Agency",
+        "abbreviation": "CRA"
+    },
+    {
+        "department": "Canada School of Public Service",
+        "abbreviation": "CSPS",
+        "paySys": "true"
+    },
+    {
+        "department": "Canada Science and Technology Museum",
+        "abbreviation": null
+    },
+    {
+        "department": "Canadian Accessibility Standards Development Organization",
+        "abbreviation": "CASDO"
+    },
+    {
+        "department": "Canadian Air Transport Security Authority",
+        "abbreviation": "CATSA"
+    },
+    {
+        "department": "Canadian Army",
+        "abbreviation": "CA"
+    },
+    {
+        "department": "Canadian Centre for Occupational Health and Safety",
+        "abbreviation": "CCOHS"
+    },
+    {
+        "department": "Canadian Coast Guard",
+        "abbreviation": "CCG"
+    },
+    {
+        "department": "Canadian Commercial Corporation",
+        "abbreviation": "CCC"
+    },
+    {
+        "department": "Canadian Conservation Institute",
+        "abbreviation": "CCI"
+    },
+    {
+        "department": "Canadian Cultural Property Export Review Board",
+        "abbreviation": null
+    },
+    {
+        "department": "Canadian Dairy Commission",
+        "abbreviation": "CDC",
+        "paySys": "true"
+    },
+    {
+        "department": "Canadian Food Inspection Agency",
+        "abbreviation": "CFIA",
+        "paySys": "true"
+    },
+    {
+        "department": "Canadian Grain Commission",
+        "abbreviation": "CGC",
+        "paySys": "true"
+    },
+    {
+        "department": "Canadian Heritage",
+        "abbreviation": "PCH",
+        "paySys": "true"
+    },
+    {
+        "department": "Canadian Heritage Information Network",
+        "abbreviation": "CHIN",
+        "paySys": "true"
+    },
+    {
+        "department": "Canadian Human Rights Commission",
+        "abbreviation": "CHRC"
+    },
+    {
+        "department": "Canadian Institutes of Health Research",
+        "abbreviation": "CIHR"
+    },
+    {
+        "department": "Canadian Intellectual Property Office",
+        "abbreviation": "CIPO"
+    },
+    {
+        "department": "Canadian Intergovernmental Conference Secretariat",
+        "abbreviation": "CICS"
+    },
+    {
+        "department": "Canadian International Trade Tribunal",
+        "abbreviation": "CITT"
+    },
+    {
+        "department": "Canadian Judicial Council",
+        "abbreviation": "CJC"
+    },
+    {
+        "department": "Canadian Museum for Human Rights",
+        "abbreviation": "CMHR"
+    },
+    {
+        "department": "Canadian Museum of History",
+        "abbreviation": "CMH"
+    },
+    {
+        "department": "Canadian Museum of Immigration at Pier 21",
+        "abbreviation": "CMIP"
+    },
+    {
+        "department": "Canadian Museum of Nature",
+        "abbreviation": "CMN"
+    },
+    {
+        "department": "Canadian Northern Economic Development Agency",
+        "abbreviation": "CanNor",
+        "paySys": "true"
+    },
+    {
+        "department": "Canadian Nuclear Safety Commission",
+        "abbreviation": "CNSC"
+    },
+    {
+        "department": "Canadian Pari-Mutuel Agency",
+        "abbreviation": "CPMA"
+    },
+    {
+        "department": "Canadian Police College",
+        "abbreviation": "CPC"
+    },
+    {
+        "department": "Canadian Race Relations Foundation",
+        "abbreviation": "CRRF"
+    },
+    {
+        "department": "Canadian Radio-Television and Telecommunications Commission",
+        "abbreviation": "CRTC",
+        "paySys": "true"
+    },
+    {
+        "department": "Canadian Security Intelligence Service",
+        "abbreviation": "CSIS"
+    },
+    {
+        "department": "Canadian Space Agency",
+        "abbreviation": "CSA"
+    },
+    {
+        "department": "Canadian Special Operations Forces Command",
+        "abbreviation": "CANSOFCOM"
+    },
+    {
+        "department": "Canadian Trade Commissioner Service",
+        "abbreviation": "TCS"
+    },
+    {
+        "department": "Canadian Transportation Agency",
+        "abbreviation": "CTA"
+    },
+    {
+        "department": "Canadian War Museum",
+        "abbreviation": null
+    },
+    {
+        "department": "CBC/Radio-Canada",
+        "abbreviation": "CBC"
+    },
+    {
+        "department": "Civilian Review and Complaints Commission for the RCMP",
+        "abbreviation": "CRCC"
+    },
+    {
+        "department": "Commissioner for Federal Judicial Affairs Canada (Office of the)",
+        "abbreviation": "FJA"
+    },
+    {
+        "department": "Commissioner of Lobbying of Canada (Office of the)",
+        "abbreviation": "OCL"
+    },
+    {
+        "department": "Commissioner of Official Languages (Office of the)",
+        "abbreviation": "OCOL"
+    },
+    {
+        "department": "Communications Research Centre Canada",
+        "abbreviation": "CRC"
+    },
+    {
+        "department": "Communications Security Establishment Canada",
+        "abbreviation": "CSEC"
+    },
+    {
+        "department": "Communications Security Establishment Commissioner (Office of the)",
+        "abbreviation": "OCSEC"
+    },
+    {
+        "department": "Competition Bureau Canada",
+        "abbreviation": "COBU"
+    },
+    {
+        "department": "Competition Tribunal",
+        "abbreviation": null
+    },
+    {
+        "department": "Conflict of Interest and Ethics Commissioner (Office of the)",
+        "abbreviation": "CIEC"
+    },
+    {
+        "department": "Copyright Board Canada",
+        "abbreviation": "CB",
+        "paySys": "true"
+    },
+    {
+        "department": "CORCAN",
+        "abbreviation": null
+    },
+    {
+        "department": "Correctional Investigator Canada",
+        "abbreviation": "OCI",
+        "paySys": "true"
+    },
+    {
+        "department": "Correctional Service Canada",
+        "abbreviation": "CSC"
+    },
+    {
+        "department": "Court Martial Appeal Court of Canada",
+        "abbreviation": "CMAC"
+    },
+    {
+        "department": "Courts Administration Service",
+        "abbreviation": "CAS"
+    },
+    {
+        "department": "Crown-Indigenous Relations and Northern Affairs Canada",
+        "abbreviation": "CIRNAC",
+        "paySys": "true"
+    },
+    {
+        "department": "Defence Construction Canada",
+        "abbreviation": "DCC"
+    },
+    {
+        "department": "Defence Research and Development Canada",
+        "abbreviation": "DRDC"
+    },
+    {
+        "department": "Democratic Institutions",
+        "abbreviation": null
+    },
+    {
+        "department": "Destination Canada",
+        "abbreviation": "DC"
+    },
+    {
+        "department": "Elections Canada",
+        "abbreviation": "Elections"
+    },
+    {
+        "department": "Employment and Social Development Canada",
+        "abbreviation": "ESDC",
+        "paySys": "true"
+    },
+    {
+        "department": "Environment and Climate Change Canada",
+        "abbreviation": "ECCC",
+        "paySys": "true"
+    },
+    {
+        "department": "Environmental Protection Review Canada",
+        "abbreviation": "EPRC"
+    },
+    {
+        "department": "Export Development Canada",
+        "abbreviation": "EDC"
+    },
+    {
+        "department": "Farm Credit Canada",
+        "abbreviation": "FCC"
+    },
+    {
+        "department": "Farm Products Council of Canada",
+        "abbreviation": "FPCC"
+    },
+    {
+        "department": "Federal Bridge Corporation",
+        "abbreviation": "FBCL"
+    },
+    {
+        "department": "Federal Court of Appeal",
+        "abbreviation": "FCA"
+    },
+    {
+        "department": "Federal Court of Canada",
+        "abbreviation": "FC"
+    },
+    {
+        "department": "Federal Economic Development Agency for Southern Ontario",
+        "abbreviation": "FedDev Ontario",
+        "paySys": "true"
+    },
+    {
+        "department": "Federal Ombudsman for Victims Of Crime (Office of the)",
+        "abbreviation": "OFOVC"
+    },
+    {
+        "department": "Finance Canada (Department of)",
+        "abbreviation": "FIN",
+        "paySys": "true"
+    },
+    {
+        "department": "Financial Consumer Agency of Canada",
+        "abbreviation": "FCAC"
+    },
+    {
+        "department": "Financial Transactions and Reports Analysis Centre of Canada",
+        "abbreviation": "FINTRAC"
+    },
+    {
+        "department": "Fisheries and Oceans Canada",
+        "abbreviation": "DFO",
+        "paySys": "true"
+    },
+    {
+        "department": "Freshwater Fish Marketing Corporation",
+        "abbreviation": "FFMC"
+    },
+    {
+        "department": "Global Affairs Canada",
+        "abbreviation": "GAC",
+        "paySys": "true"
+    },
+    {
+        "department": "Governor General of Canada",
+        "abbreviation": "OSGG"
+    },
+    {
+        "department": "Great Lakes Pilotage Authority Canada",
+        "abbreviation": "GLPA"
+    },
+    {
+        "department": "Health Canada",
+        "abbreviation": "HC",
+        "paySys": "true"
+    },
+    {
+        "department": "Historic Sites and Monuments Board of Canada",
+        "abbreviation": "HSMBC"
+    },
+    {
+        "department": "Human Rights Tribunal of Canada",
+        "abbreviation": "HRTC"
+    },
+    {
+        "department": "Immigration and Refugee Board of Canada",
+        "abbreviation": "IRB",
+        "paySys": "true"
+    },
+    {
+        "department": "Immigration, Refugees and Citizenship Canada",
+        "abbreviation": "IRCC",
+        "paySys": "true"
+    },
+    {
+        "department": "Impact Assessment Agency of Canada",
+        "abbreviation": "IAAC"
+    },
+    {
+        "department": "Independent Review Panel for Defence Acquisition",
+        "abbreviation": "IRPDA"
+    },
+    {
+        "department": "Indian Oil and Gas Canada",
+        "abbreviation": null
+    },
+    {
+        "department": "Indigenous and Northern Affairs Canada",
+        "abbreviation": "INAC",
+        "paySys": "true"
+    },
+    {
+        "department": "Indigenous Services Canada",
+        "abbreviation": "ISC",
+        "paySys": "true"
+    },
+    {
+        "department": "Industrial Technologies Office",
+        "abbreviation": "ITO"
+    },
+    {
+        "department": "Information Commissioner (Office of the)",
+        "abbreviation": "OIC"
+    },
+    {
+        "department": "Infrastructure Canada",
+        "abbreviation": "INFC"
+    },
+    {
+        "department": "Innovation, Science and Economic Development Canada",
+        "abbreviation": "ISED",
+        "paySys": "true"
+    },
+    {
+        "department": "Intergovernmental Affairs",
+        "abbreviation": "IGA"
+    },
+    {
+        "department": "International Development Research Centre",
+        "abbreviation": "IDRC"
+    },
+    {
+        "department": "Jacques Cartier and Champlain Bridges",
+        "abbreviation": "JCCBI"
+    },
+    {
+        "department": "Judicial Compensation and Benefits Commission",
+        "abbreviation": null
+    },
+    {
+        "department": "Justice Canada (Department of)",
+        "abbreviation": "JUS",
+        "paySys": "true"
+    },
+    {
+        "department": "Labour Program",
+        "abbreviation": null
+    },
+    {
+        "department": "Laurentian Pilotage Authority Canada",
+        "abbreviation": "LPA"
+    },
+    {
+        "department": "Leader of the Government in the House of Commons",
+        "abbreviation": null
+    },
+    {
+        "department": "Library and Archives Canada",
+        "abbreviation": "LAC"
+    },
+    {
+        "department": "Marine Atlantic",
+        "abbreviation": "MarineAtlantic"
+    },
+    {
+        "department": "Measurement Canada",
+        "abbreviation": "MC"
+    },
+    {
+        "department": "Military Grievances External Review Committee",
+        "abbreviation": "MGERC"
+    },
+    {
+        "department": "Military Police Complaints Commission of Canada",
+        "abbreviation": "MPCC"
+    },
+    {
+        "department": "National Arts Centre",
+        "abbreviation": "NAC"
+    },
+    {
+        "department": "National Battlefields Commission",
+        "abbreviation": "NBC"
+    },
+    {
+        "department": "National Capital Commission",
+        "abbreviation": "NCC"
+    },
+    {
+        "department": "National Defence",
+        "abbreviation": "DND",
+        "paySys": "true"
+    },
+    {
+        "department": "National Film Board",
+        "abbreviation": "NFB",
+        "paySys": "true"
+    },
+    {
+        "department": "National Gallery of Canada",
+        "abbreviation": "NGC"
+    },
+    {
+        "department": "National Research Council Canada",
+        "abbreviation": "NRC"
+    },
+    {
+        "department": "National Seniors Council",
+        "abbreviation": null
+    },
+    {
+        "department": "Natural Resources Canada",
+        "abbreviation": "NRCan",
+        "paySys": "true"
+    },
+    {
+        "department": "Natural Sciences and Engineering Research Canada",
+        "abbreviation": "NSERC"
+    },
+    {
+        "department": "Northern Pipeline Agency Canada",
+        "abbreviation": "NPA",
+        "paySys": "true"
+    },
+    {
+        "department": "Occupational Health and Safety Tribunal Canada",
+        "abbreviation": "OHSTC"
+    },
+    {
+        "department": "Office of the Chief Military Judge",
+        "abbreviation": "OCMJ"
+    },
+    {
+        "department": "Ombudsman for the Department of National Defence and the Canadian Forces (Office of the)",
+        "abbreviation": null,
+        "paySys": "true"
+    },
+    {
+        "department": "Pacific Pilotage Authority Canada",
+        "abbreviation": "PPA"
+    },
+    {
+        "department": "Parks Canada",
+        "abbreviation": "PC",
+        "paySys": "true"
+    },
+    {
+        "department": "Parliament of Canada",
+        "abbreviation": null
+    },
+    {
+        "department": "Parole Board of Canada",
+        "abbreviation": "PBC",
+        "paySys": "true"
+    },
+    {
+        "department": "Patented Medicine Prices Review Board Canada",
+        "abbreviation": "PMPRB",
+        "paySys": "true"
+    },
+    {
+        "department": "Polar Knowledge Canada",
+        "abbreviation": "POLAR"
+    },
+    {
+        "department": "Prime Minister of Canada",
+        "abbreviation": null
+    },
+    {
+        "department": "Privacy Commissioner of Canada (Office of the)",
+        "abbreviation": "OPC"
+    },
+    {
+        "department": "Privy Council Office",
+        "abbreviation": "PCO",
+        "paySys": "true"
+    },
+    {
+        "department": "Procurement Ombudsman (Office of the)",
+        "abbreviation": "OPO"
+    },
+    {
+        "department": "Public Health Agency of Canada",
+        "abbreviation": "PHAC",
+        "paySys": "true"
+    },
+    {
+        "department": "Public Prosecution Service of Canada",
+        "abbreviation": "PPSC",
+        "paySys": "true"
+    },
+    {
+        "department": "Public Safety Canada",
+        "abbreviation": "PS",
+        "paySys": "true"
+    },
+    {
+        "department": "Public Sector Integrity Commissioner of Canada (Office of the)",
+        "abbreviation": "PSIC"
+    },
+    {
+        "department": "Public Sector Pension Investment Board",
+        "abbreviation": "PSP Investments"
+    },
+    {
+        "department": "Public Servants Disclosure Protection Tribunal Canada",
+        "abbreviation": "PSDPTC"
+    },
+    {
+        "department": "Public Service Commission of Canada",
+        "abbreviation": "PSC",
+        "paySys": "true"
+    },
+    {
+        "department": "Public Service Labour Relations and Employment Board",
+        "abbreviation": "PSLREB"
+    },
+    {
+        "department": "Public Services and Procurement Canada",
+        "abbreviation": "PSPC",
+        "paySys": "true"
+    },
+    {
+        "department": "Registry of the Specific Claims Tribunal of Canada",
+        "abbreviation": "SCT"
+    },
+    {
+        "department": "Ridley Terminals Inc.",
+        "abbreviation": null
+    },
+    {
+        "department": "Royal Canadian Air Force",
+        "abbreviation": "RCAF"
+    },
+    {
+        "department": "Royal Canadian Mint",
+        "abbreviation": "Mint"
+    },
+    {
+        "department": "Royal Canadian Mounted Police",
+        "abbreviation": "RCMP",
+        "paySys": "true"
+    },
+    {
+        "department": "Royal Canadian Mounted Police External Review Committee",
+        "abbreviation": "ERC",
+        "paySys": "true"
+    },
+    {
+        "department": "Royal Canadian Navy",
+        "abbreviation": "RCN"
+    },
+    {
+        "department": "Royal Military College of Canada",
+        "abbreviation": "RMCC"
+    },
+    {
+        "department": "Secretariat of the National Security and Intelligence Committee of Parliamentarians",
+        "abbreviation": "NSICOP",
+        "paySys": "true"
+    },
+    {
+        "department": "Security Intelligence Review Committee",
+        "abbreviation": "SIRC",
+        "paySys": "true"
+    },
+    {
+        "department": "Service Canada",
+        "abbreviation": "ServCan"
+    },
+    {
+        "department": "Shared Services Canada",
+        "abbreviation": "SSC",
+        "paySys": "true"
+    },
+    {
+        "department": "Social Sciences and Humanities Research Council of Canada",
+        "abbreviation": "SSHRC"
+    },
+    {
+        "department": "Social Security Tribunal of Canada",
+        "abbreviation": "SST"
+    },
+    {
+        "department": "Standards Council of Canada",
+        "abbreviation": "SCC-CCN"
+    },
+    {
+        "department": "Statistics Canada",
+        "abbreviation": "StatCan"
+    },
+    {
+        "department": "Superintendent of Bankruptcy Canada (Office of the)",
+        "abbreviation": "OSB"
+    },
+    {
+        "department": "Superintendent of Financial Institutions Canada (Office of the)",
+        "abbreviation": "OSFI"
+    },
+    {
+        "department": "Supreme Court of Canada",
+        "abbreviation": "SCC"
+    },
+    {
+        "department": "Tax Court of Canada",
+        "abbreviation": "TCC"
+    },
+    {
+        "department": "Taxpayers' Ombudsman (Office of the)",
+        "abbreviation": "OTO"
+    },
+    {
+        "department": "Telefilm Canada",
+        "abbreviation": null
+    },
+    {
+        "department": "Translation Bureau",
+        "abbreviation": null
+    },
+    {
+        "department": "Transport Canada",
+        "abbreviation": "TC"
+    },
+    {
+        "department": "Transportation Appeal Tribunal of Canada",
+        "abbreviation": "TATC"
+    },
+    {
+        "department": "Transportation Safety Board of Canada",
+        "abbreviation": "TSB"
+    },
+    {
+        "department": "Treasury Board of Canada Secretariat",
+        "abbreviation": "TBS",
+        "paySys": "true"
+    },
+    {
+        "department": "Veterans Affairs Canada",
+        "abbreviation": "VAC",
+        "paySys": "true"
+    },
+    {
+        "department": "Veterans Review and Appeal Board",
+        "abbreviation": "VRAB"
+    },
+    {
+        "department": "Veterans' Ombudsman (Office of the)",
+        "abbreviation": null
+    },
+    {
+        "department": "VIA Rail Canada",
+        "abbreviation": "VIA Rail"
+    },
+    {
+        "department": "Virtual Museum of Canada",
+        "abbreviation": "VMC"
+    },
+    {
+        "department": "Western Economic Diversification Canada",
+        "abbreviation": "WD"
+    },
+    {
+        "department": "Windsor-Detroit Bridge Authority",
+        "abbreviation": "WDBA"
+    },
+    {
+        "department": "Women and Gender Equality Canada",
+        "abbreviation": "WAGE"
+    },
+    {
+        "department": "Youth",
+        "abbreviation": "YOUTH"
+    }
+]
