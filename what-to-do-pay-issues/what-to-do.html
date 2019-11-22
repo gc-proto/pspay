@@ -125,49 +125,61 @@
                 <li>If no one in your management chain is available to talk to you right away, you should <a href="https://tbs-proto1.openplus.ca/en/node/114">contact the Pay Help Centre</a></li>
               </ul>
           </section>
-        <div class="wb-frmvld" data-wb-urlmapping="{
-                                                   &quot;p=paycentre&quot;: { &quot;action&quot;: &quot;addClass&quot;, &quot;class&quot;: &quot;hidden&quot; },
-                                                   &quot;p=notpaycentre&quot;: { &quot;action&quot;: &quot;addClass&quot;, &quot;class&quot;: &quot;hidden&quot; }
-                                                   }"><!-- <form method="get"> --><!--Smart question!-->
-          <div class="wb-fieldflow" data-wb-fieldflow="{
-                                                       &quot;noForm&quot;:false,
-                                                       &quot;renderas&quot;:&quot;radio&quot;,
-                                                       &quot;base&quot;: { &quot;live&quot;: false },
-                                                       &quot;noreqlabel&quot;: true,
-                                                       &quot;default&quot;: [{ &quot;action&quot;: &quot;addClass&quot;, &quot;source&quot;:&quot;#paycentre,#notpaycentre&quot;, &quot;class&quot;: &quot;hidden&quot; },
-                                                       { &quot;action&quot;: &quot;addClass&quot;, &quot;source&quot;: &quot;#wb-auto-12&quot;, &quot;class&quot;: &quot;checked&quot;}]
-                                                       }" id="question1">
-            <p>Is your department served by the Pay Centre?
+          <h2 id="Steps">Pay timeline and steps
+            </h2>
+            <p>Enter and select your department name or initials to view the timeline and steps for your department:
             </p>
-            <ul>
-              <li data-wb-fieldflow="{ &quot;action&quot;: &quot;removeClass&quot;, &quot;source&quot;:&quot;#paycentre&quot;, &quot;class&quot;: &quot;hidden&quot;}">Yes, served by the Pay Centre</li>
-              <!--result-->
-              <li data-wb-fieldflow="{ &quot;action&quot;: &quot;removeClass&quot;, &quot;source&quot;:&quot;#notpaycentre&quot;, &quot;class&quot;: &quot;hidden&quot; }">No, we have compensation advisors</li>
-              <li data-wb-fieldflow="{ &quot;action&quot;: &quot;removeClass&quot;, &quot;source&quot;:&quot;#notsure&quot;, &quot;class&quot;: &quot;hidden&quot; }">Not sure - help me find out</li>
-            </ul>
-          </div>
-          <!-- </form> --></div>
-        <div class="hidden" data-wb-urlmapping="{ &quot;p=paycentre&quot;: { &quot;action&quot;: &quot;removeClass&quot;, &quot;class&quot;: &quot;hidden&quot; } }" id="paycentre">
+            <script>
+              //Hide dropdown datalist until input >= 'chars'
+              function hideUnlessInput(inputID, datalistID, chars){
+                console.log(inputID);
+                var input=document.getElementById(inputID).value.length;
+                var datalist = document.querySelector("datalist");
+                console.log(input);
+                if(input < chars){
+                  datalist.id = "";
+                }
+                else if(input == chars || input > chars){
+                  datalist.id = datalistID;
+                }
+              }
+              function displayParagraph(){
+                try {
+                  var currentlySelectedDept = document.getElementById("dept").value;
+                  //Edit alt-text
+                  var currentlySelectedItem = document.querySelector("option[value='"+currentlySelectedDept+"']");
+                  var currentSysCheck = currentlySelectedItem.getAttribute("data-paysys");
+                  if(currentSysCheck == 'true' || currentSysCheck == '"true"'){
+                    document.getElementById("NOPAYSYSDIV").style.display = "none";
+                    document.getElementById("HASPAYSYSDIV").style.display = "block";
+                  }
+                  else{
+                    document.getElementById("HASPAYSYSDIV").style.display = "none";
+                    document.getElementById("NOPAYSYSDIV").style.display = "block";
+                  }
+                }
+                catch(err) {
+                  console.log(err.message);
+                }
+              }
+              displayParagraph();
+            </script>
+            <p><input id="dept" list="suggestions" name="dept" onchange="displayParagraph();" onclick="hideUnlessInput('dept','suggestions',1);" oninput="hideUnlessInput('dept','suggestions',1);" placeholder="Start typing" style="width:35em" type="text" /> <datalist id="suggestions" style="display:none"> <!--[if lte IE 9]><select><![endif]--> <!--[if lte IE 9]></select><![endif]--> 
+              </datalist> 
+              <script>
+                //Open Departments Data JSON (XSS Avoidance: Must be stored locally)
+                fetch('https://tbs-proto1.openplus.ca/sites/default/files/2019-10/departmentsdata_0.txt')
+                  .then(response => response.text())
+                  .then(text => fillDataList(id="suggestions",dataset=text,delimiters=["department","abbreviation","paySys"],value="department", label="abbreviation"));
+              </script>
+      </p>
+        <div id="HASPAYSYSDIV" style="display:none">
           <p>Your department is served by the Pay Centre. You or your manager should <a href="https://tbs-proto1.openplus.ca/en/node/114">contact the Pay Help Centre</a></p>
-              <p>In the meantime, work with your manager to identify the source of the problem. Is it:</p>
-              <ul>
-                <li>a Pay Issue: all the right paperwork was submitted on time, but something has gone wrong in the Phoenix Pay system, such as a salary change or leave without pay</li> 
-                <li>an HR issue: some paperwork wasn't submitted through your Human Resources (HR) team for a change, such as a letter of offer, retirement package, maternity leave document, acting form,</li>
-            </ul>	 
-          </p>
-           
         </div>
-        <div class="hidden" data-wb-urlmapping="{ &quot;p=notpaycentre&quot;: { &quot;action&quot;: &quot;removeClass&quot;, &quot;class&quot;: &quot;hidden&quot; } }" id="notpaycentre">
+        <div id="NOPAYSYSDIV" style="display:none">
           <p>Your department is served by compensation advisors within your department, not the Public Service Pay Centre. You or your manager should contact your departmental compensation and HR advisor unit about your pay situation.
           </p>
         </div>
-        <div class="hidden" data-wb-urlmapping="{ &quot;p=notsure&quot;: { &quot;action&quot;: &quot;removeClass&quot;, &quot;class&quot;: &quot;hidden&quot; } }" id="notsure">
-          <p>Show autocomplete here so people can enter their department and find out whether they are or are not served by the pay centre. 
-          </p>
-        </div>
-      </div>
-      <div class="clearfix">&nbsp;
-      </div>
     </section> <!-- END OF SECTION WITH DEPT QUESTION-->
   </div>
   <div id="not-full-pay-help" style="display:none">
