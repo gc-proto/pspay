@@ -57,122 +57,52 @@
 <main class="container" property="mainContentOfPage" role="main">
   <h1 id="wb-cont" property="name">What to do if you're having pay issues
   </h1>
-  <p>Answer some questions to get personalized guidance for your issue.
+  <p>Answer some questions to get personalized guidance for your issue.</p>
+
+	<script>
+	  //Hide dropdown datalist until input >= 'chars'
+	  function hideUnlessInput(inputID, datalistID, chars){
+	    console.log(inputID);
+	    var input=document.getElementById(inputID).value.length;
+	    var datalist = document.querySelector("datalist");
+	    console.log(input);
+	    if(input < chars){
+	      datalist.id = "";
+	    }
+	    else if(input == chars || input > chars){
+	      datalist.id = datalistID;
+	    }
+	  }
+	  function displayParagraph(){
+	    try {
+	      var currentlySelectedDept = document.getElementById("dept").value;
+	      //Edit alt-text
+	      var currentlySelectedItem = document.querySelector("option[value='"+currentlySelectedDept+"']");
+	      var currentSysCheck = currentlySelectedItem.getAttribute("data-paysys");
+	      if(currentSysCheck == 'true' || currentSysCheck == '"true"'){
+	        document.getElementById("NOPAYSYSDIV").style.display = "none";
+	        document.getElementById("HASPAYSYSDIV").style.display = "block";
+	      }
+	      else{
+	        document.getElementById("HASPAYSYSDIV").style.display = "none";
+	        document.getElementById("NOPAYSYSDIV").style.display = "block";
+	      }
+	    }
+	    catch(err) {
+	      console.log(err.message);
+	    }
+	  }
+	  displayParagraph();
+	</script>
+	<p><input id="dept" list="suggestions" name="dept" onchange="displayParagraph();" onclick="hideUnlessInput('dept','suggestions',1);" oninput="hideUnlessInput('dept','suggestions',1);" style="width:35em" type="text" /> <datalist id="suggestions" style="display:none"> <!--[if lte IE 9]><select><![endif]--> <!--[if lte IE 9]></select><![endif]-->
+  </datalist>
+  <script>
+    //Open Departments Data JSON (XSS Avoidance: Must be stored locally)
+    fetch('https://gc-proto.github.io/pspay/what-to-do-pay-issues/departmentsdata_0.txt')
+      .then(response => response.text())
+      .then(text => fillDataList(id="suggestions",dataset=text,delimiters=["department","abbreviation","paySys"],value="department", label="abbreviation"));
+  </script>
   </p>
-
-	<legend class="h5">What kind of issue are you having?</legend>
-
- <ul class="list-unstyled can-ca-form">
-  <li class="radio">
-   <input id="no-pay" name="pay-issue" type="radio" value="Received no pay" />
-   <label for="no-pay">Received no pay</label>
-  </li>
-  <li class="radio">
-   <input id="not-full-pay" name="pay-issue" type="radio" value="Didn't receive full pay" />
-   <label for="not-full-pay">Didn't receive full pay</label>
-  </li>
-  <li class="radio">
-   <input id="overpayment" name="pay-issue" type="radio" value="Received too much pay (overpayment)" />
-   <label for="overpayment">Received too much pay (overpayment)</label>
-  </li>
-  <li class="radio">
-   <input id="deductions" name="pay-issue" type="radio" value="Deductions were incorrect" />
-   <label for="deductions" />Deductions were incorrect</label>
-  </li>
-  <li class="radio">
-   <input id="other" name="pay-issue" type="radio" value="Other pay issue not on this list" />
-   <label for="other">Other pay issue not on this list </label>
-  </li>
-  <li class="radio">
-   <input id="update" name="pay-issue" type="radio" value="Need an update on a reported issue" />
-   <label for="update">Need an update on a reported issue </label>
-  </li>
- </ul>
-<!--<input type="submit" value="Continue" class="btn btn-primary mrgn-bttm-md">-->
-
-<div class="clearfix mrgn-tp-lg"></div>
-  <div id="no-pay-help" style="display:none">
-    <!-- Second question for no pay-->
-    <p>Did you start or return to work within the last 6 weeks?
-    </p>
-    <ul class="list-unstyled can-ca-form">
-       <li class="radio">
-   	<input id="yes-recent" name="new-hire" type="radio" value="Yes" />
-   	<label for="yes-recent">Yes</label>
-  	</li>
-  	<li class="radio">
-   	<input id="no-recent" name="new-hire" type="radio" value="No" />
-   	<label for="no-recent">No </label>
-  	</li>
-    </ul>
-  </div>
-  <div id="2recent-hire" style="display:none"> <!--triggered by yes-recent for new-hire-->
-    <p>If all the paperwork was submitted on time, your first pay should be deposited within your first 20 days of work.  </p>
-    <ul>
-      <li>If you have not received any pay within your first 20 days of work, you can <a href="https://tbs-proto1.openplus.ca/en/node/141">request an Emergency Salary Advance</a>. </li>
-      <li>Check the Pay Calendar to understand the <a href="https://tbs-proto1.openplus.ca/en/node/196#pay-periods">timing of pay periods with paydays and your first pay</a>. </li>
-    </ul>
-  </div>
-  <div id="2not-recent" style="display:none"> <!--triggered by no-recent for new-hire-->
-    <section> <!-- radio button question about whether or not served by pay centre-->
-      <div class="well" style="background-color:white !important;">
-        <h2 id="Steps">First thing to do: Talk to your manager
-        </h2>
-        <section>
-            <p>Your first step is to report that you weren't paid to your manager or someone in your management chain. </p>
-              <ul>
-                <li>Your manager can immediately <a href="https://tbs-proto1.openplus.ca/en/node/141">request an Emergency Salary Advance</a>.</li>
-                <li>If no one in your management chain is available to talk to you right away, you should <a href="https://tbs-proto1.openplus.ca/en/node/114">contact the Pay Help Centre</a></li>
-              </ul>
-          </section>
-          <h2 id="Steps">Next step
-            </h2>
-            <p>Enter and select your department name or initials to view the process for your department:
-            </p>
-            <script>
-              //Hide dropdown datalist until input >= 'chars'
-              function hideUnlessInput(inputID, datalistID, chars){
-                console.log(inputID);
-                var input=document.getElementById(inputID).value.length;
-                var datalist = document.querySelector("datalist");
-                console.log(input);
-                if(input < chars){
-                  datalist.id = "";
-                }
-                else if(input == chars || input > chars){
-                  datalist.id = datalistID;
-                }
-              }
-              function displayParagraph(){
-                try {
-                  var currentlySelectedDept = document.getElementById("dept").value;
-                  //Edit alt-text
-                  var currentlySelectedItem = document.querySelector("option[value='"+currentlySelectedDept+"']");
-                  var currentSysCheck = currentlySelectedItem.getAttribute("data-paysys");
-                  if(currentSysCheck == 'true' || currentSysCheck == '"true"'){
-                    document.getElementById("NOPAYSYSDIV").style.display = "none";
-                    document.getElementById("HASPAYSYSDIV").style.display = "block";
-                  }
-                  else{
-                    document.getElementById("HASPAYSYSDIV").style.display = "none";
-                    document.getElementById("NOPAYSYSDIV").style.display = "block";
-                  }
-                }
-                catch(err) {
-                  console.log(err.message);
-                }
-              }
-              displayParagraph();
-            </script>
-            <p><input id="dept" list="suggestions" name="dept" onchange="displayParagraph();" onclick="hideUnlessInput('dept','suggestions',1);" oninput="hideUnlessInput('dept','suggestions',1);" placeholder="Start typing" style="width:35em" type="text" /> <datalist id="suggestions" style="display:none"> <!--[if lte IE 9]><select><![endif]--> <!--[if lte IE 9]></select><![endif]-->
-              </datalist>
-              <script>
-                //Open Departments Data JSON (XSS Avoidance: Must be stored locally)
-                fetch('./departmentsdata_0.txt')
-                  .then(response => response.text())
-                  .then(text => fillDataList(id="suggestions",dataset=text,delimiters=["department","abbreviation","paySys"],value="department", label="abbreviation"));
-              </script>
-      </p>
         <div id="HASPAYSYSDIV" style="display:none">
           <p>Your department is served by the Pay Centre. You or your manager should <a href="https://tbs-proto1.openplus.ca/en/node/114">contact the Pay Help Centre</a></p>
         </div>
@@ -209,20 +139,16 @@
 </main>
 <div id="def-footer">&nbsp;
 </div>
-<!-- Write closure template -->
-<script type="text/javascript">
+<!-- Write closure template --><script type="text/javascript">
   var defFooter = document.getElementById("def-footer");
   defFooter.outerHTML = wet.builder.footer({
     showFooter: true,
     showFeatures: true
   });
-</script>
-<!-- Write closure template -->
-<script type="text/javascript">
+</script><!-- Write closure template --><script type="text/javascript">
   document.write(wet.builder.refFooter({
   }));
 </script>
-<!-- <script type="text/javascript" src="./datalist.js"></script> -->
 <script>
   var issueType = "";
   $(document).ready(
