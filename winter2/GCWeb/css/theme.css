@@ -13444,7 +13444,7 @@ aside.features .thumbnail img {
     background-color: #eee;
     background-image: url(https://test.canada.ca/pspay/winter-banners/bkg-home-banner-winter-2.jpg);
     background-repeat: no-repeat;
-background-position: center;
+    background-position: 13% 87%;
     background-size: 100% auto;
     color: #fff
 }
