@@ -78,7 +78,7 @@
   </li>
   <li class="radio">
    <input id="deductions" name="pay-issue" type="radio" value="Deductions were incorrect" />
-   <label for="deductions" />Deductions were incorrect</label>
+   <label for="deductions">Deductions were incorrect</label>
   </li>
   <li class="radio">
    <input id="other" name="pay-issue" type="radio" value="Other pay issue not on this list" />
@@ -115,10 +115,15 @@
     </ul>
   </div>
   <div id="2not-recent" style="display:none"> <!--triggered by no-recent for new-hire-->
+	  
+	  
+	  
+	  
+	  
     <a href="https://tbs-proto1.openplus.ca/en/landing/what-do-if-youre-having-pay-issues-received-no-pay" class="btn btn-call-to-action">Continue</a>
   </div>
   <div id="not-full-pay-help" style="display:none">
-    <p>If you didn't receive full pay...
+    <p>If you didn't receive full pay, there may be an issue with your deductions. 
     </p>
   </div>
   <div id="overpayment-help" style="display:none">
@@ -126,24 +131,27 @@
     </p>
   </div>
   <div id="deductions-help" style="display:none">
-    <p>If there are issues with deductions...
+    <p>If your deductions are incorrect, begin with your departmental or agency HR advisors.
     </p>
   </div>
   <div id="other-help" style="display:none">
-    <p>For other issues, <a href="https://tbs-proto1.openplus.ca/en/node/114">contact the Pay Help Centre</a>.
+    <p>For other issues, <a href="https://tbs-proto1.openplus.ca/en/node/114">contact the Pay Help Line</a>.
     </p>
   </div>
   <div id="update-help" style="display:none">
-    <p>If you called or sent a contact form to the Pay Help centre, you can <a href="https://tbs-proto1.openplus.ca/en/node/114">call to get an update</a>.
+    <p>If you called or sent a contact form to the Pay Help Line, you can <a href="https://tbs-proto1.openplus.ca/en/node/114">call to get an update</a>.
     </p>
   </div>
   <div id="select-dept" style="display:none"><!-- select dept -->
     <p>Your department or agency (or where you were when you had the issue):
     </p>
-
+</div>
+<div style="margin-bottom:2em">&nbsp;
+</div>
 </main>
 <div id="def-footer">&nbsp;
 </div>
+
 <!-- Write closure template -->
 <script type="text/javascript">
   var defFooter = document.getElementById("def-footer");
