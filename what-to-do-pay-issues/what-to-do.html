@@ -4,7 +4,7 @@
 	<head>
 		<meta charset="utf-8">
 		<!-- Web Experience Toolkit (WET) / Boîte à outils de l'expérience Web (BOEW) wet-boew.github.io/wet-boew/License-en.html / wet-boew.github.io/wet-boew/Licence-fr.html -->
-		<title>Theme page design - Canada.ca</title>
+		<title>Having pay issues</title>
 		<meta content="width=device-width,initial-scale=1" name="viewport">
 		<!-- Meta data -->
 		<!-- Meta data-->
@@ -34,19 +34,19 @@
 				}],
 				breadcrumbs: [{
 					title: "Home",
-					href: "#"
+					href: "https://tbs-proto1.openplus.ca/en/node/22"
 				},{
 					title: "Working for the government",
-					href: "#"
+					href: "https://tbs-proto1.openplus.ca/en/node/79"
 				},{
 					title: "Pay, pension and benefits",
-					href: "#"
+					href: "https://tbs-proto1.openplus.ca/en/node/78"
 				},{
 					title: "Pay for the public service",
-					href: "#"
-				},{
-					title: "Pay issues",
-					href: "#"
+					href: "https://tbs-proto1.openplus.ca/en/node/94"
+        },{
+					title: "Having pay issues",
+					href: "https://tbs-proto1.openplus.ca/en/node/393"
 				}],
 				search: true,
 				siteMenu: true,
@@ -55,13 +55,12 @@
 </script>
 
 
-
-
 <main class="container" property="mainContentOfPage" role="main">
   <h1 id="wb-cont" property="name">What to do if you're having pay issues
   </h1>
-  <p>Enter details about your pay issue for guidance, or directly access specific help.
+  <p>Answer some questions to get personalized guidance for your issue.
   </p>
+
 	<legend class="h5">What kind of issue are you having?</legend>
 
  <ul class="list-unstyled can-ca-form">
@@ -79,7 +78,7 @@
   </li>
   <li class="radio">
    <input id="deductions" name="pay-issue" type="radio" value="Deductions were incorrect" />
-   <label for="deductions" />Deductions were incorrect</label>
+   <label for="deductions">Deductions were incorrect</label>
   </li>
   <li class="radio">
    <input id="other" name="pay-issue" type="radio" value="Other pay issue not on this list" />
@@ -90,118 +89,83 @@
    <label for="update">Need an update on a reported issue </label>
   </li>
  </ul>
-<input type="submit" value="Continue" class="btn btn-primary mrgn-bttm-md">
+<!--<input type="submit" value="Continue" class="btn btn-primary mrgn-bttm-md">-->
 
 <div class="clearfix mrgn-tp-lg"></div>
   <div id="no-pay-help" style="display:none">
-    <p>Did you recently start in the public service?
+    <!-- Second question for no pay-->
+    <p>Did you start or return to work within the last 6 weeks?
     </p>
-    <ul>
-      <li>Yes</li>
-      <li>No</li>
+    <ul class="list-unstyled can-ca-form">
+       <li class="radio">
+   	<input id="yes-recent" name="new-hire" type="radio" value="Yes" />
+   	<label for="yes-recent">Yes</label>
+  	</li>
+  	<li class="radio">
+   	<input id="no-recent" name="new-hire" type="radio" value="No" />
+   	<label for="no-recent">No </label>
+  	</li>
     </ul>
   </div>
+  <div id="2recent-hire" style="display:none"> <!--triggered by yes-recent for new-hire-->
+    <p>If all the paperwork was submitted on time, your first pay should be deposited within your first 20 days of work.  </p>
+    <ul>
+      <li>If you have not received any pay within your first 20 days of work, you can <a href="https://tbs-proto1.openplus.ca/en/node/141">request an Emergency Salary Advance</a>. </li>
+      <li>Check the Pay Calendar to understand the <a href="https://tbs-proto1.openplus.ca/en/node/196#pay-periods">timing of pay periods with paydays and your first pay</a>. </li>
+    </ul>
+  </div>
+  <div id="2not-recent" style="display:none"> <!--triggered by no-recent for new-hire-->
+	  
+	  
+	  
+	  
+	  
+    <a href="https://tbs-proto1.openplus.ca/en/landing/what-do-if-youre-having-pay-issues-received-no-pay" class="btn btn-call-to-action">Continue</a>
+  </div>
   <div id="not-full-pay-help" style="display:none">
-    <p>If you didn't receive full pay...
+    <p>If you didn't receive full pay, there may be an issue with your deductions. 
     </p>
   </div>
   <div id="overpayment-help" style="display:none">
-    <p><a href="https://tbs-proto1.openplus.ca/en/node/385/">Overpayment help</a>
+    <p>Use <a href="https://tbs-proto1.openplus.ca/en/node/335/">Overpayments - how to identify, report and repay</a>
     </p>
   </div>
   <div id="deductions-help" style="display:none">
-    <p>If there are issues with deductions...
+    <p>If your deductions are incorrect, begin with your departmental or agency HR advisors.
     </p>
   </div>
   <div id="other-help" style="display:none">
-    <p>For other issues, contact the Pay contact centre.
+    <p>For other issues, <a href="https://tbs-proto1.openplus.ca/en/node/114">contact the Pay Help Line</a>.
     </p>
   </div>
   <div id="update-help" style="display:none">
-    <p>If you submitted to the Pay contact centre, you can call to get an update.
+    <p>If you called or sent a contact form to the Pay Help Line, you can <a href="https://tbs-proto1.openplus.ca/en/node/114">call to get an update</a>.
     </p>
   </div>
   <div id="select-dept" style="display:none"><!-- select dept -->
     <p>Your department or agency (or where you were when you had the issue):
     </p>
-
-
-    <script>
-
-
-      //Hide dropdown datalist until input >= 'chars'
-      //function hideUnlessInput(dropdownID, datalistID, chars){
-      //  if(document.getElementById(dropdownID).value.length >= chars ){
-      //    document.getElementById(datalistID).style.display = 'block';
-      //  }document.getElementById(dropdownID).value != null &&
-      //else if(document.getElementById(dropdownID) != null){
-      //  document.getElementById(datalistID).style.display = 'none';
-      //}
-      //}
-      function displayParagraph(){
-        var currentlySelectedDept = document.getElementById("dept").value;
-        //Hide dropdown unless there is user input
-        alert(document.activeElement)
-        if(!document.getElementById("dept").value){
-          alert(document.getElementById("dept").text);
-        }
-        //Edit alt-text
-        var currentlySelectedItem = document.querySelector("option[value='"+currentlySelectedDept+"']");
-        var currentSysCheck = currentlySelectedItem.getAttribute("data-paysys");
-        if(currentSysCheck == 'true' || currentSysCheck == '"true"'){
-          document.getElementById("NOPAYSYSDIV").style.display = "none";
-          document.getElementById("HASPAYSYSDIV").style.display = "block";
-        }
-        else{
-          document.getElementById("HASPAYSYSDIV").style.display = "none";
-          document.getElementById("NOPAYSYSDIV").style.display = "block";
-        }
-      }
-      displayParagraph();
-    </script>
-    <p><input id="dept" list="suggestions" name="dept" onchange="displayParagraph()" style="width:35em" type="text" /> <datalist id="suggestions"> <!--[if lte IE 9]><select><![endif]--> <!--[if lte IE 9]></select><![endif]-->
-      </datalist>
-      <script>
-        //Open Departments Data JSON (XSS Avoidance: Must be stored locally)
-        fetch('https://tbs-proto1.openplus.ca/sites/default/files/2019-10/departmentsdata_0.txt')
-          .then(response => response.text())
-          .then(text => fillDataList(id="suggestions",dataset=text,delimiters=["department","abbreviation","paySys"],value="department", label="abbreviation"));
-      </script>
-    </p>
-  </div>
-  <!-- Select dept -->
-  <div id="HASPAYSYSDIV" style="display:none">
-    <p>Served by the Pay Centre.
-    </p>
-  </div>
-  <div id="NOPAYSYSDIV" style="display:none">
-    <p>Served by its own compensation advisors.
-    </p>
-  </div>
-  <div id="def-preFooter">
-  </div>
-  <!-- Write closure template --><script type="text/javascript">
-  var defPreFooter = document.getElementById("def-preFooter");
-  defPreFooter.outerHTML = wet.builder.preFooter({
-    dateModified: "April 1, 2019",
-    showPostContent: true,
-    showFeedback: true,
-    showShare: true
-  });
-  </script>
+</div>
+<div style="margin-bottom:2em">&nbsp;
+</div>
 </main>
 <div id="def-footer">&nbsp;
 </div>
-<!-- Write closure template --><script type="text/javascript">
+
+<!-- Write closure template -->
+<script type="text/javascript">
   var defFooter = document.getElementById("def-footer");
   defFooter.outerHTML = wet.builder.footer({
     showFooter: true,
     showFeatures: true
   });
-</script><!-- Write closure template --><script type="text/javascript">
+</script>
+<!-- Write closure template -->
+<script type="text/javascript">
   document.write(wet.builder.refFooter({
   }));
 </script>
+<!-- <script type="text/javascript" src="./datalist.js"></script> -->
 <script>
   var issueType = "";
   $(document).ready(
@@ -266,6 +230,25 @@
     });
 </script>
 
+<script>
+  var hireDate= "";
+  $(document).ready(
+    function(){
+      $("input[name=new-hire]").on( "change", function() {
+        hireDate = this.id; //issueType becomes the ID of their choice
+        if (hireDate == 'yes-recent')
+        {
+          $("#2not-recent").hide("slow");
+          $("#2recent-hire").show("slow");
+        }
+        else if (hireDate=='no-recent')
+        {
+          $("#2recent-hire").hide("slow");
+          $("#2not-recent").show("slow");
+        }
+      });
+    });
+</script>
 
 	</body>
 </html>
